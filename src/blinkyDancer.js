@@ -1,3 +1,4 @@
+/*
 var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   var blinkyDancer = makeDancer(top, left, timeBetweenSteps);
 
@@ -17,3 +18,37 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
 
   return blinkyDancer;
 };
+*/
+// var makeBlinkyDancer = function (top, left, timeBetweenSteps) {
+//   return new BlinkyDancer(top, left, timeBetweenSteps);
+// };
+// make blinky function
+var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
+  // call dancer
+  makeDancer.call(this, top, left, timeBetweenSteps);
+
+
+};
+//var BlinkyDancer = function(){
+//  return new BlinkyDancer()
+// }
+
+makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
+makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
+makeBlinkyDancer.prototype.step = function () {
+  //this is bound to blinkydancer instance object //old step
+  //invokeing step method from dancer
+  makeDancer.prototype.step.call(this);
+  //but when calling the blinkydancer instance, it finds step method in bd prototype-->which leads it to toggle
+  //modified inherited step function call
+  this.$node.toggle();
+};
+
+
+// object.create
+// constructor
+// var blinkyInstance;
+// console.log();
+
+//blinkyDancerInstance.step = function
+
