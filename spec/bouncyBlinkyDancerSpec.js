@@ -18,7 +18,7 @@ describe('bouncyBlinkyDancer', function() {
   //   expect(bouncyBlinkyDancer.$node.toggle.called).to.be.true;
   // });
 
-  it('should have a step function that makes its node go across screen', function() {
+  it('should have a step function that makes its node bounce up and down', function() {
     sinon.spy(bouncyBlinkyDancer.$node, 'animate');
     bouncyBlinkyDancer.step();
     expect(bouncyBlinkyDancer.$node.animate.called).to.be.true;
