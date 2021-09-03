@@ -73,7 +73,8 @@ makeDancer.prototype.lineUp = function() {
   console.log('hi');
   console.log('dancers', window.dancers);
   for (var i = 0; i < window.dancers.length; i++) {
-    window.dancers[i].animate({top: 50, left: 50});
+    window.dancers[i].animate({top: (50+(i*30)), left: 50});
+
   }
 };
 
