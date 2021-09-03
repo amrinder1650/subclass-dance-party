@@ -27,8 +27,13 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 
-.squareDancer{
+.dancer.bouncyBlinkyDancer{
   border:10px solid blue;
-  border-radius:10px;
-  position:absolute;
+
+}
+
+.dancer.squareDancer{
+  border: solid 21px #f0f;
+  width: 5px;
+  height: 5px;
 }

@@ -26,8 +26,8 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
 var makeSquareDancer = function(top, left, timeBetweenSteps) {
   // call dancer
   makeDancer.call(this, top, left, timeBetweenSteps);
-
-  console.log(this.setPosition);
+  // this.$node = $('<span class="squareDancer"></span>');
+  this.$node.addClass('squareDancer');
 };
 //var BlinkyDancer = function(){
 //  return new BlinkyDancer()

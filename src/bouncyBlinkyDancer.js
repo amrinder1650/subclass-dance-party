@@ -27,6 +27,8 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
 var makeBouncyBlinkyDancer = function(top, left, timeBetweenSteps) {
   // call dancer
   makeBlinkyDancer.call(this, top, left, timeBetweenSteps);
+  // this.$node = $('<span class= "bouncyBlinkyDancer"></span>');
+  this.$node.addClass('bouncyBlinkyDancer');
 
 
 };
@@ -62,6 +64,7 @@ makeBouncyBlinkyDancer.prototype.step = function () {
   this.$node.toggle(function() {
     $(this).animate({top: '+=200'}, 50);
   });
+  this.$node;
 
 };
 
