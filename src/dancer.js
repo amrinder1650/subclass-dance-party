@@ -43,7 +43,6 @@ var makeDancer = function (top, left, timeBetweenSteps) {
 
   var button = document.getElementById('lineUpBtn');
 
-
   button.addEventListener('click', this.lineUp);
 
   this.timeBetweenSteps = timeBetweenSteps;
@@ -68,13 +67,7 @@ makeDancer.prototype.setPosition = function(top, left) {
 };
 
 
-// makeDancer.prototype.lineUp = function() {
-//   var button = document.getElementById('lineUpBtn');
-//   button.addEventListener('click', function() {
-//     console.log('hi');
-//   });
 
-// };
 
 makeDancer.prototype.lineUp = function() {
   console.log('hi');
@@ -82,7 +75,6 @@ makeDancer.prototype.lineUp = function() {
   for (var i = 0; i < window.dancers.length; i++) {
     window.dancers[i].animate({top: 50, left: 50});
   }
-
 };
 
 

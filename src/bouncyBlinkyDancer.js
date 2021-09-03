@@ -64,7 +64,7 @@ makeBouncyBlinkyDancer.prototype.step = function () {
   this.$node.toggle(function() {
     $(this).animate({top: '+=200'}, 50);
   });
-  this.$node;
+  // this.$node;
 
 };
 
