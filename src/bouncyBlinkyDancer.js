@@ -43,15 +43,26 @@ makeBouncyBlinkyDancer.prototype.step = function () {
   //but when calling the blinkydancer instance, it finds step method in bd prototype-->which leads it to toggle
   //modified inherited step function call
   // console.log(this.$node);
-  this.$node.animate({
-    opacity: 0.25,
-    left: "+=50",
-    height: "toggle"
-  }, 5000, function() {
-    // Animation complete.
+
+  //   this.$node.animate({
+  //   //   // opacity: 0.25,
+  //   //   // left: "+=50",
+  //   //   height: "toggle"
+  //   // }, 5000
+  //   //   // Animation complete.
+  //   // );
+
+  //   // // this.$node.toggle();
+
+  // };
+
+  this.$node.toggle(function() {
+    $(this).animate({top: '-=200'}, 50);
+  });
+  this.$node.toggle(function() {
+    $(this).animate({top: '+=200'}, 50);
   });
 
-  this.$node.toggle();
 };
 
 
@@ -62,5 +73,15 @@ makeBouncyBlinkyDancer.prototype.step = function () {
 
 //blinkyDancerInstance.step = function
 
+/*
 
 
+$(document).ready(function(){
+  $("#topbar-show").toggle(function(){
+    $(this).animate({height:40},200);
+  },function(){
+    $(this).animate({height:10},200);
+  });
+});
+
+*/
