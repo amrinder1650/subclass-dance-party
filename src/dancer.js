@@ -76,12 +76,12 @@ makeDancer.prototype.setPosition = function(top, left) {
 
 makeDancer.prototype.lineUp = function() {
   for (var i = 0; i < window.dancers.length; i ++) {
-    window.dancers[i].animate({top: (50 + (i * 30)), left: 50});
+    window.dancers[i].animate({top: (50 + (i * 30))});
     if (i % 2 === 0) {
-      window.dancers[i].animate({opacity: 0.25});
+      window.dancers[i].animate({opacity: 0.25, left: 50});
     }
     if (i % 2 === 1) {
-      window.dancers[i].animate({opacity: 1, left:500});
+      window.dancers[i].animate({opacity: 1, left: 500});
     }
   }
 
