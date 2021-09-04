@@ -39,7 +39,7 @@ var makeDancer = function(top, left, timeBetweenSteps) {
 
 var makeDancer = function (top, left, timeBetweenSteps) {
   this.$node = $('<span class="dancer"></span>');
-  this.window = [];
+
   console.log('before', window.dancers);
   window.dancers.push(this.$node);
   console.log('after', window.dancers);
