@@ -27,6 +27,15 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   // call dancer
   makeDancer.call(this, top, left, timeBetweenSteps);
 
+  var test = this;
+
+  this.$node.mouseover(
+    function() {
+      console.log('mouse over');
+      test.$node.css({'border-color': 'purple'});
+    }
+  );
+
 
 };
 //var BlinkyDancer = function(){

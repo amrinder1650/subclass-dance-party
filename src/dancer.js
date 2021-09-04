@@ -39,13 +39,18 @@ var makeDancer = function(top, left, timeBetweenSteps) {
 
 var makeDancer = function (top, left, timeBetweenSteps) {
   this.$node = $('<span class="dancer"></span>');
+  this.window = [];
+  console.log('before', window.dancers);
   window.dancers.push(this.$node);
-  console.log(window.dancers);
+  console.log('after', window.dancers);
   // var $button = $('<button id="lineUpBtn">Line Up</button>');
   var button = document.getElementById('lineUpBtn');
   // $button.click(this.lineUp);
 
   button.addEventListener('click', this.lineUp);
+
+
+
 
   this.timeBetweenSteps = timeBetweenSteps;
   this.step();
@@ -73,9 +78,10 @@ makeDancer.prototype.lineUp = function() {
   for (var i = 0; i < window.dancers.length; i ++) {
     window.dancers[i].animate({top: (50 + (i * 30)), left: 50});
     if (i % 2 === 0) {
-      window.dancers[i].animate({opacity: 0.25, left: 50});
-    } else {
-      window.dancers[i].animate({opacity: 1000, left: 500});
+      window.dancers[i].animate({opacity: 0.25});
+    }
+    if (i % 2 === 1) {
+      window.dancers[i].animate({opacity: 1, left:500});
     }
   }
 

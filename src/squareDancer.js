@@ -28,6 +28,15 @@ var makeSquareDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
   // this.$node = $('<span class="squareDancer"></span>');
   this.$node.addClass('squareDancer');
+
+  var test = this;
+
+  this.$node.mouseover(
+    function() {
+      console.log('mouse over');
+      test.$node.css({'border-color': 'purple'});
+    }
+  );
 };
 //var BlinkyDancer = function(){
 //  return new BlinkyDancer()

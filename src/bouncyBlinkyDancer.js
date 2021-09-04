@@ -30,6 +30,19 @@ var makeBouncyBlinkyDancer = function(top, left, timeBetweenSteps) {
   // this.$node = $('<span class= "bouncyBlinkyDancer"></span>');
   this.$node.addClass('bouncyBlinkyDancer');
 
+  var test = this;
+
+  this.$node.mouseover(
+    function() {
+      console.log('mouse over');
+      test.$node.css({'border-color': 'purple'});
+    }
+  );
+
+  // $( '.dancer').mouseover(function() {
+  //   console.log('mouse over');
+  // });
+
 
 };
 //var BlinkyDancer = function(){
