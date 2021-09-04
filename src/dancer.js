@@ -45,7 +45,6 @@ var makeDancer = function (top, left, timeBetweenSteps) {
   var button = document.getElementById('lineUpBtn');
   // $button.click(this.lineUp);
 
-
   button.addEventListener('click', this.lineUp);
 
   this.timeBetweenSteps = timeBetweenSteps;
@@ -71,10 +70,24 @@ makeDancer.prototype.setPosition = function(top, left) {
 
 
 makeDancer.prototype.lineUp = function() {
-  for (var i = 0; i < window.dancers.length; i++) {
-    window.dancers[i].animate({top: (50 +(i*30)), left: 50});
+  for (var i = 0; i < window.dancers.length; i ++) {
+    window.dancers[i].animate({top: (50 + (i * 30)), left: 50});
+    if (i % 2 === 0) {
+      window.dancers[i].animate({opacity: 0.25, left: 50});
+    } else {
+      window.dancers[i].animate({opacity: 1000, left: 500});
+    }
   }
+
 };
+
+//sortNodeFunction
+
+//for each node in window.dancers
+
+//if it's odd-->display '
+
+//if it's even -->animate
 
 
 
